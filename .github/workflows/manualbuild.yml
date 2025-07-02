@@ -7,9 +7,9 @@ name: ManualBuild
 
 on:
   workflow_dispatch:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
 
 #env:
 
