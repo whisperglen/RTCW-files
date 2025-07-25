@@ -91,98 +91,98 @@ itemDef {
 
 
 
-	itemDef {
-		name graphics
-		text "Set Recommended"
-		type 1	
-		textscale .24
-		group grpsystem
-//		background "ui/assets/button_back.tga"
-		style WINDOW_STYLE_FILLED
-		rect 82 30 290 12
-		textalign 1
-		textalignx 145
-		textaligny 12
-		forecolor 1 1 1 1
-		backcolor 1 1 1 .07 
-		visible 1
-		textalign ITEM_ALIGN_CENTER
-		action { play "sound/misc/kcaction.wav" ; 
-open rec_restart_popmenu ; hide graphics ; hide graphicsapply }	
-		}
+	// itemDef {
+		// name graphics
+		// text "Set Recommended"
+		// type 1	
+		// textscale .24
+		// group grpsystem
+// //		background "ui/assets/button_back.tga"
+		// style WINDOW_STYLE_FILLED
+		// rect 82 30 290 12
+		// textalign 1
+		// textalignx 145
+		// textaligny 12
+		// forecolor 1 1 1 1
+		// backcolor 1 1 1 .07 
+		// visible 1
+		// textalign ITEM_ALIGN_CENTER
+		// action { play "sound/misc/kcaction.wav" ; 
+// open rec_restart_popmenu ; hide graphics ; hide graphicsapply }	
+		// }
 
 
 
 
 
 
-itemDef {
-    	name graphics				
-	group grpSystem
-	text "Quality:"
-   	type ITEM_TYPE_MULTI	
-	cvar "ui_glCustom"
-	cvarFloatList { "High Quality" 0 "Normal" 1 "Fast" 2 "Fastest" 3 "Custom" 4 }
+// itemDef {
+    	// name graphics				
+	// group grpSystem
+	// text "Quality:"
+   	// type ITEM_TYPE_MULTI	
+	// cvar "ui_glCustom"
+	// cvarFloatList { "High Quality" 0 "Normal" 1 "Fast" 2 "Fastest" 3 "Custom" 4 }
 
-	cvarTest		"ui_glCustom"
-	hideCvar		{ "999" }	// 999 is 'recommended'
+	// cvarTest		"ui_glCustom"
+	// hideCvar		{ "999" }	// 999 is 'recommended'
 
-	rect 82 55 290 12
-   	textalign ITEM_ALIGN_RIGHT
-   	textalignx 142 
-   	textaligny 10
-	textscale .22
-	style WINDOW_STYLE_FILLED
-	backcolor 1 1 1 .07         
-   	forecolor 1 1 1 1
-   	visible 0 
-	action { uiScript update "ui_glCustom" }
-	}
-
-
-
-	itemDef {
-		name graphics				
-		group grpSystem
-		text "Quality:  Recommended"
-		type ITEM_TYPE_BUTTON	
-
-		cvarTest		"ui_glCustom"
-		showCvar		{ "999" }	// 999 is 'recommended'
-
-		rect 82 55 290 12
-		textalign ITEM_ALIGN_CENTER
-		textalignx 162 
-		textaligny 10
-		textscale .22
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07
-		forecolor 1 1 1 1
-		visible 0
-		action {
-			setcvar ui_glCustom 0;	// go back to regular selection group
-			uiScript update "ui_glCustom" }
-		}
+	// rect 82 55 290 12
+   	// textalign ITEM_ALIGN_RIGHT
+   	// textalignx 142 
+   	// textaligny 10
+	// textscale .22
+	// style WINDOW_STYLE_FILLED
+	// backcolor 1 1 1 .07         
+   	// forecolor 1 1 1 1
+   	// visible 0 
+	// action { uiScript update "ui_glCustom" }
+	// }
 
 
 
-	itemDef {
-   		name graphics
-		group grpSystem
-      		type ITEM_TYPE_YESNO
-		text "GL Extensions:"
-		cvar "r_allowExtensions"
-		rect 82 70 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .22  
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07     
-      	forecolor 1 1 1 1
-      	visible 0
-		action { uiScript glCustom }
-	}
+	// itemDef {
+		// name graphics				
+		// group grpSystem
+		// text "Quality:  Recommended"
+		// type ITEM_TYPE_BUTTON	
+
+		// cvarTest		"ui_glCustom"
+		// showCvar		{ "999" }	// 999 is 'recommended'
+
+		// rect 82 55 290 12
+		// textalign ITEM_ALIGN_CENTER
+		// textalignx 162 
+		// textaligny 10
+		// textscale .22
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07
+		// forecolor 1 1 1 1
+		// visible 0
+		// action {
+			// setcvar ui_glCustom 0;	// go back to regular selection group
+			// uiScript update "ui_glCustom" }
+		// }
+
+
+
+	// itemDef {
+   		// name graphics
+		// group grpSystem
+      		// type ITEM_TYPE_YESNO
+		// text "GL Extensions:"
+		// cvar "r_allowExtensions"
+		// rect 82 70 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .22  
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07     
+      	// forecolor 1 1 1 1
+      	// visible 0
+		// action { uiScript glCustom }
+	// }
 	
 	itemDef {
    		name graphics
@@ -192,7 +192,7 @@ itemDef {
 		cvar "r_mode"
 		cvarFloatList {  "640*480" 3 "800*600" 4 "960*720" 5 "1024*768" 6 "1152*864" 7 "1280*1024" 8 "1600*1200" 9 "2048*1536" 10 "856*480 Wide Screen" 11 }
 //		"320*240" 0 "400*300" 1 "512*384" 2
-		rect 82 85 290 12
+		rect 82 35 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -204,24 +204,24 @@ itemDef {
 		action { uiScript glCustom }
 	}
 
-	itemDef {
-   		name graphics
-		group grpSystem
-   		type ITEM_TYPE_MULTI
-		text "Color Depth:"
-		cvar "r_colorbits"
-		cvarFloatList { "Desktop Default" 0 "16-bit" 16 "32-bit" 32 }
-		rect 82 100 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .22 
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07      
-      	forecolor 1 1 1 1
-      	visible 0 
-		action { uiScript glCustom ; uiScript update "r_colorbits" }
-	}
+	// itemDef {
+   		// name graphics
+		// group grpSystem
+   		// type ITEM_TYPE_MULTI
+		// text "Color Depth:"
+		// cvar "r_colorbits"
+		// cvarFloatList { "Desktop Default" 0 "16-bit" 16 "32-bit" 32 }
+		// rect 82 100 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .22 
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07      
+      	// forecolor 1 1 1 1
+      	// visible 0 
+		// action { uiScript glCustom ; uiScript update "r_colorbits" }
+	// }
 
 	itemDef {
    		name graphics
@@ -229,7 +229,26 @@ itemDef {
       	type ITEM_TYPE_YESNO
 		text "Fullscreen:"
 		cvar "r_fullscreen"
-		rect 82 115 290 12
+		rect 82 50 290 12
+      	textalign ITEM_ALIGN_RIGHT
+      	textalignx 142
+      	textaligny 10
+		textscale .22
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07        
+      	forecolor 1 1 1 1
+      	visible 0 
+		action { uiScript glCustom }
+	}
+
+	itemDef {
+		name graphics
+		group grpSystem
+		type ITEM_TYPE_MULTI
+		text "VSync:"
+		cvar "r_swapInterval"
+		cvarFloatList { "No" 0 "Default" 1 "One" 2 }
+		rect 82 65 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -248,7 +267,7 @@ itemDef {
 		text "Lighting:"
 		cvar "r_vertexlight"
 		cvarFloatList { "Light Map (high)" 0 "Vertex (low)" 1  }
-		rect 82 130 290 12
+		rect 82 80 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -260,24 +279,24 @@ itemDef {
 		action { uiScript glCustom }
 	}
 
-	itemDef {
-   		name graphics
-		group grpSystem
-    		type ITEM_TYPE_MULTI
-		text "Geometric Detail:"
-		cvar "r_lodbias"
-		cvarFloatList { "High" 0 "Medium" 1 "Low" 2 }
-		rect 82 145 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .22 
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07       
-      	forecolor 1 1 1 1
-      	visible 0 
-		action { uiScript glCustom ; uiScript update "r_lodbias" }
-	}
+	// itemDef {
+   		// name graphics
+		// group grpSystem
+    		// type ITEM_TYPE_MULTI
+		// text "Geometric Detail:"
+		// cvar "r_lodbias"
+		// cvarFloatList { "High" 0 "Medium" 1 "Low" 2 }
+		// rect 82 145 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .22 
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07       
+      	// forecolor 1 1 1 1
+      	// visible 0 
+		// action { uiScript glCustom ; uiScript update "r_lodbias" }
+	// }
 
 	itemDef {
 		name graphics
@@ -286,7 +305,7 @@ itemDef {
 		text "Character Textures:"
 		cvar "r_picmip2"
 		cvarFloatList { "Low" 3 "Normal" 2 "High" 1 "Extra" 0 }
-		rect 82 160 290 12
+		rect 82 95 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -305,7 +324,7 @@ itemDef {
 		text "General Textures:"
 		cvar "r_picmip"
 		cvarFloatList { "Low" 2 "Normal" 1 "High" 0 }
-		rect 82 175 290 12
+		rect 82 110 290 12
 	     	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -329,8 +348,8 @@ itemDef {
       	type ITEM_TYPE_MULTI
 		text "Texture Filter:"
 		cvar "r_texturemode"
-		cvarStrList { "Bilinear", "GL_LINEAR_MIPMAP_NEAREST", "Trilinear", "GL_LINEAR_MIPMAP_LINEAR"  }
-		rect 82 190 290 12
+		cvarStrList { "Bilinear", "GL_LINEAR_MIPMAP_NEAREST", "Trilinear", "GL_LINEAR_MIPMAP_LINEAR", "Pixelate", "GL_NEAREST"  }
+		rect 82 125 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -342,41 +361,41 @@ itemDef {
 		action { uiScript glCustom }
 		}
 
-	itemDef {
-      	name graphics
-		group grpSystem
-      	type ITEM_TYPE_YESNO
-		text "Compress Textures:"
-		cvar "r_ext_compressed_textures"
-		rect 82 205 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .22 
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07       
-      	forecolor 1 1 1 1
-      	visible 0 
-		action { uiScript glCustom }
-		}
-	itemDef {
-		name graphics
-		group grpSystem
-		type ITEM_TYPE_MULTI
-		text "Texture Quality:"
-		cvar "r_texturebits"
-		cvarFloatList { "Default" 0 "16 bit" 16 "32 bit" 32 }
-		rect 82 220 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .23 
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07       
-      	forecolor 1 1 1 1
-      	visible 0 
-		action { uiScript glCustom }
-    		}
+	// itemDef {
+      	// name graphics
+		// group grpSystem
+      	// type ITEM_TYPE_YESNO
+		// text "Compress Textures:"
+		// cvar "r_ext_compressed_textures"
+		// rect 82 205 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .22 
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07       
+      	// forecolor 1 1 1 1
+      	// visible 0 
+		// action { uiScript glCustom }
+		// }
+	// itemDef {
+		// name graphics
+		// group grpSystem
+		// type ITEM_TYPE_MULTI
+		// text "Texture Quality:"
+		// cvar "r_texturebits"
+		// cvarFloatList { "Default" 0 "16 bit" 16 "32 bit" 32 }
+		// rect 82 220 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .23 
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07       
+      	// forecolor 1 1 1 1
+      	// visible 0 
+		// action { uiScript glCustom }
+    		// }
 
 
 	itemDef {
@@ -385,7 +404,7 @@ itemDef {
       	type ITEM_TYPE_SLIDER
 		text "Brightness:"
 		cvarfloat "r_gamma" 1 0.5 3
- 		rect 82 235 290 12
+ 		rect 82 140 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142 
       	textaligny 10
@@ -415,7 +434,7 @@ itemDef {
 // would be nice to be able to do an extension check from the menu
 //		extensionTest "GL_NV_fog_distance"
 
-		rect 82 250 290 12
+		rect 82 155 290 12
       	textalign ITEM_ALIGN_RIGHT
       	textalignx 142
       	textaligny 10
@@ -432,33 +451,69 @@ itemDef {
 //
 // ATI
 //
-	itemDef {
-		name graphics
-		group grpSystem
-		type ITEM_TYPE_YESNO
-		text "ATI Truform:"
-		cvar "r_ext_ATI_pntriangles"
+	// itemDef {
+		// name graphics
+		// group grpSystem
+		// type ITEM_TYPE_YESNO
+		// text "ATI Truform:"
+		// cvar "r_ext_ATI_pntriangles"
 
-// would be nice to be able to do an extension check from the menu
-//		extensionTest "GL_ATIX_pn_triangles"
+// // would be nice to be able to do an extension check from the menu
+// //		extensionTest "GL_ATIX_pn_triangles"
 
-		rect 82 265 290 12
-      	textalign ITEM_ALIGN_RIGHT
-      	textalignx 142
-      	textaligny 10
-		textscale .22 
-		style WINDOW_STYLE_FILLED
-		backcolor 1 1 1 .07       
-      	forecolor 1 1 1 1
-      	visible 0 
-		action { uiScript glCustom }
-   		}
+		// rect 82 265 290 12
+      	// textalign ITEM_ALIGN_RIGHT
+      	// textalignx 142
+      	// textaligny 10
+		// textscale .22 
+		// style WINDOW_STYLE_FILLED
+		// backcolor 1 1 1 .07       
+      	// forecolor 1 1 1 1
+      	// visible 0 
+		// action { uiScript glCustom }
+   		// }
 
 //cvar_t	*r_ext_ATI_pntriangles;
 //cvar_t	*r_ati_truform_tess;
 //cvar_t	*r_ati_truform_mode;
 
 
+
+	itemDef {
+   		name graphics
+		group grpSystem
+      	type ITEM_TYPE_YESNO
+		text "Remix Corona Lights:"
+		cvar "r_rmx_coronas"
+		rect 82 170 290 12
+      	textalign ITEM_ALIGN_RIGHT
+      	textalignx 142
+      	textaligny 10
+		textscale .22
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07        
+      	forecolor 1 1 1 1
+      	visible 0 
+		//action { uiScript glCustom }
+	}
+
+	itemDef {
+   		name graphics
+		group grpSystem
+      	type ITEM_TYPE_YESNO
+		text "Remix Dynamic Lights:"
+		cvar "r_rmx_dynamiclight"
+		rect 82 185 290 12
+      	textalign ITEM_ALIGN_RIGHT
+      	textalignx 142
+      	textaligny 10
+		textscale .22
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07        
+      	forecolor 1 1 1 1
+      	visible 0 
+		//action { uiScript glCustom }
+	}
 
 
 

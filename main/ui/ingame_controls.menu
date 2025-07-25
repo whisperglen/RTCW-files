@@ -179,6 +179,25 @@ itemDef {
 	mouseexit { hide keyBindStatus } 
 	}
 
+itemDef {
+	name look
+	group grpControls
+	type ITEM_TYPE_BIND
+	text "Flashlight:"
+	cvar "toggleflashlight"
+		rect 82 105 290 12
+		textalign ITEM_ALIGN_RIGHT
+		textalignx 142
+		textaligny 10
+		textscale .23           
+		forecolor 1 1 1 1
+		style WINDOW_STYLE_FILLED
+		backcolor 1 1 1 .07
+		visible 0 
+	mouseenter { show keyBindStatus }
+	mouseexit { hide keyBindStatus } 
+	}
+
 //zoom in
 
 itemDef {
@@ -187,7 +206,7 @@ itemDef {
 	type ITEM_TYPE_BIND
 	text "Zoom In:"
 	cvar "zoomin"
-		rect 82 105 290 12
+		rect 82 120 290 12
 		textalign ITEM_ALIGN_RIGHT
 		textalignx 142
 		textaligny 10
@@ -208,7 +227,7 @@ itemDef {
 	type ITEM_TYPE_BIND
 		text "Zoom Out:"
 		cvar "zoomout"
-		rect 82 120 290 12
+		rect 82 135 290 12
 		textalign ITEM_ALIGN_RIGHT
 		textalignx 142
 		textaligny 10
@@ -229,7 +248,7 @@ itemDef {
 	type ITEM_TYPE_YESNO
 	text "Free Look:"
 	cvar "cl_freelook"
-		rect 82 135 290 12
+		rect 82 150 290 12
 		textalign ITEM_ALIGN_RIGHT
 		textalignx 142
 		textaligny 10
@@ -253,7 +272,7 @@ itemDef {
 	group grpControls
 	type ITEM_TYPE_TEXT
 	text "Use Weapon Cycle"
-	rect 90 160 290 12
+	rect 90 175 290 12
 	textalign ITEM_ALIGN_RIGHT
 	textalignx 180
 	textaligny 10
@@ -269,7 +288,7 @@ itemDef {
 	text "For Zooming:"
 	cvar "cg_useWeapsForZoom"
 	cvarFloatList { "Off" 0 "On (normal)" 1 "On (reverse)" 2 }
-	rect 82 175 290 12
+	rect 82 190 290 12
 	textalign ITEM_ALIGN_RIGHT
 	textalignx 142
 	textaligny 10
