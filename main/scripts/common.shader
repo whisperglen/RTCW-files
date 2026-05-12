@@ -835,7 +835,8 @@ textures/sfx/portal3a_back2
     {
         map textures/sfx/portal_sfx1.tga
         blendFunc GL_DST_COLOR GL_ZERO
-   //     tcMod rotate 360azz    }
+   //     tcMod rotate 360azz
+    }
     {
         map textures/sfx/portal_sfx.tga
         blendFunc GL_ONE GL_ONE
